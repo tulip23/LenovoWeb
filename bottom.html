@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bottom.css" />
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<!--<script type="text/javascript" src="js/index.js" ></script>-->
+	</head>
+	<body>
+		<div id="last">
+			<div id="forward"><</div>
+			<div id="back">></div>
+			<ul id="list">
+				<li class="across">1
+					<img src="img/indexcarousel/ikhhwim5lebqj1pp6umnpv2p69655k610961.jpg">
+				</li>
+				<li class="across">2
+					<img src="img/indexcarousel/f1yoj8d2h1by846h0l8r0qt8uklt2d314053.jpg">
+				</li>
+				<li class="across">3
+					<img src="img/indexcarousel/6jdy6ohr7uwupx0bv8e0unwmybd1iz028034.jpg">
+				</li>
+				<li class="across">4
+					<img src="img/indexcarousel/t0tm4sqsnlmepc7zcrxuaw96ik1jdg726237.jpg">
+				</li>
+				<li class="across">5
+					<img src="img/indexcarousel/qq3hlu3h1ieta8u2ptd30g55ciygoa870459.jpg">
+				</li>
+				<li class="across">6
+					<img src="img/indexcarousel/0lo50djvynr49o8hjpx32crt5v4sx6402088.jpg">
+				</li>
+				
+				<li class="across">1
+					<img src="img/indexcarousel/ikhhwim5lebqj1pp6umnpv2p69655k610961.jpg">
+				</li>
+				<li class="across">2
+					<img src="img/indexcarousel/f1yoj8d2h1by846h0l8r0qt8uklt2d314053.jpg">
+				</li>
+				<li class="across">3
+					<img src="img/indexcarousel/6jdy6ohr7uwupx0bv8e0unwmybd1iz028034.jpg">
+				</li>
+				<li class="across">4
+					<img src="img/indexcarousel/t0tm4sqsnlmepc7zcrxuaw96ik1jdg726237.jpg">
+				</li>
+			</ul>
+		</div>
+		<script>
+				window.onload = function(){
+					var oP = document.getElementById('list');
+					var oG = document.getElementsByClassName('across');
+					var oBefore = document.getElementById('forward');
+					var oNext = document.getElementById('back');
+					var iN = 0;
+					function changePic(){
+						var nowleft = -(iN)*420;
+						console.log(iN);
+						oP.style.left = nowleft+'px';	
+					}
+					
+//				//向前
+			oBefore.onclick=function(){
+				iN--;
+				if(iN<=0){
+					iN=4;
+				}
+				console.log('前'+iN)
+				changePic()
+			}
+			//向后
+			oNext.onclick=function(){
+				iN++;
+				if(iN>4){
+					iN=0;
+				}
+				console.log('后'+iN)
+				changePic()
+			}			
+}
+		</script>
+	</body>
+</html>
